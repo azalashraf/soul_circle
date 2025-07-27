@@ -1,54 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOUL_CIRCLE | Talk. Heal. Grow.</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soul Circle - Emotional Support</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <h1>SOUL_CIRCLE</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <nav class="navbar">
+    <h1 class="logo">Soul Circle</h1>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#founder">Founder</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="hero">
-        <h2>Talk. Heal. Grow.</h2>
-        <p>Your safe space for emotional clarity and inner peace.</p>
-        <button onclick="scrollToContact()">Book Your First Session</button>
-    </section>
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h2>Find Peace Within</h2>
+      <p>One conversation at a time. Talk in person. Heal from within.</p>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book a Session</button>
+    </div>
+  </section>
 
-    <section id="about">
-        <h2>About Soul circle </h2>
-        <p>We help people deal with stress, mental fog, and emotional overwhelm through genuine 1-on-1 conversations and guidance. No judgment, no diagnosis — just real talk and support.</p>
-    </section>
+  <section id="about" class="about-section" data-aos="fade-up">
+    <h2>About Soul Circle</h2>
+    <p>We offer emotional support for individuals struggling with stress, anxiety, and inner turmoil. Through personal, one-on-one conversations, we help you navigate your thoughts, emotions, and journey towards peace.</p>
+  </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>🧘 1-on-1 Talk Sessions - ₹499/hr</li>
-            <li>💬 First Session Trial - ₹99</li>
-            <li>🌿 Weekly Support Plan (4 Sessions) - ₹1799</li>
-            <li>🤝 Group Mindful Circles - ₹250/person</li>
-        </ul>
-    </section>
+  <section id="services" class="services-section" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Personal Counseling</h3>
+        <p>One-on-one in-person sessions to share your thoughts, gain clarity, and find peace of mind.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Stress & Anxiety Support</h3>
+        <p>Talk openly and privately about daily stressors, anxiety triggers, and emotional pressure.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Wellness Workshops</h3>
+        <p>Interactive sessions focusing on mindfulness, healing, and inner growth strategies.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="team">
-        <h2>Meet the Team</h2>
-        <div class="team-member">
-            <img src="alina.jpg" alt="Alina Saifi " width="150" height="150" />
-            <h3>Alina Saifi</h3>
-            <p>Founder & Emotional Wellness Guide</p>
-        </div>
-        <p class="founder-message"><strong>Message from the Founder:</strong><br>"We’re just two ordinary souls — who’ve carried our own quiet storms, faced lonely nights, and wished someone would simply listen.
+  <section id="team" class="team-section" data-aos="fade-up">
+    <h2>Meet the Team</h2>
+    <div class="team-members">
+      <div class="member" data-aos="zoom-in">
+        <img src="alina.jpg" alt="Md Azal Ashraf" />
+        <h3>Alina Saifi</h3>
+        <p>Founder & Emotional Wellness Guide</p>
+      </div>
+      <div class="member" data-aos="zoom-in">
+        <img src="images/ayesha.jpg" alt="Azal " />
+        <h3>Md Azal Ashraf</h3>
+        <p>CTO</p>
+      </div>
+      <div class="member" data-aos="zoom-in">
+        <img src="images/you.jpg" alt="Damad" />
+        <h3>Alina Ka Pati</h3>
+        <p>Damad G</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="founder" class="founder-section" data-aos="fade-up">
+    <h2>Message from the Founder</h2>
+    <p>“We’re just two ordinary souls — who’ve carried our own quiet storms, faced lonely nights, and wished someone would simply listen.
 
 That’s why we created SoulCircle.
 A place where you can show up — messy, overwhelmed, or completely silent — and still be held in warmth.
@@ -61,35 +89,49 @@ Come talk to us. No judgment. No pressure. Just presence.
 
 With heart,
 — Aleena & Azal
-Founders of SoulCircle"</p>
-    </section>
+Founders of SoulCircle”</p>
+  </section>
 
-    <section id="contact">
-        <h2>Book a Session</h2>
-        <form onsubmit="handleSubmit(event)">
-            <input type="text" id="name" placeholder="Your Name" required />
-            <input type="email" id="email" placeholder="Your Email" required />
-            <textarea id="message" placeholder="What would you like to talk about?" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+  <section id="pricing" class="pricing-section" data-aos="fade-up">
+    <h2>Our Pricing</h2>
+    <div class="pricing-table">
+      <div class="pricing-plan" data-aos="fade-up" data-aos-delay="100">
+        <h3>Basic Session</h3>
+        <p>₹299 / 30 mins</p>
+        <ul>
+          <li>One-on-one talk</li>
+          <li>Safe & private environment</li>
+        </ul>
+        <button>Book Now</button>
+      </div>
+      <div class="pricing-plan" data-aos="fade-up" data-aos-delay="200">
+        <h3>Deep Listening</h3>
+        <p>₹499 / 1 hour</p>
+        <ul>
+          <li>Guided conversation</li>
+          <li>Stress relief guidance</li>
+        </ul>
+        <button>Book Now</button>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Soul Circle | All rights reserved</p>
-    </footer>
+  <section id="contact" class="contact-section" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <script>
-        function scrollToContact() {
-            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-        }
+  <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-        function handleSubmit(event) {
-            event.preventDefault();
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            alert(`Thank you, ${name}! We’ve received your message and will reach out to you at ${email}.`);
-            document.querySelector("form").reset();
-        }
-    </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
