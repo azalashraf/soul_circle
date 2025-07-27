@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOUL_CIRCLE | Talk. Heal. Grow.</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>SOUL_CIRCLE</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Talk. Heal. Grow.</h2>
+        <p>Your safe space for emotional clarity and inner peace.</p>
+        <button onclick="scrollToContact()">Book Your First Session</button>
+    </section>
+
+    <section id="about">
+        <h2>About Soul circle </h2>
+        <p>We help people deal with stress, mental fog, and emotional overwhelm through genuine 1-on-1 conversations and guidance. No judgment, no diagnosis — just real talk and support.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>🧘 1-on-1 Talk Sessions - ₹499/hr</li>
+            <li>💬 First Session Trial - ₹99</li>
+            <li>🌿 Weekly Support Plan (4 Sessions) - ₹1799</li>
+            <li>🤝 Group Mindful Circles - ₹250/person</li>
+        </ul>
+    </section>
+
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="team-member">
+            <img src="alina.jpg" alt="Alina Saifi " width="150" height="150" />
+            <h3>Alina Saifi</h3>
+            <p>Founder & Emotional Wellness Guide</p>
+        </div>
+        <p class="founder-message"><strong>Message from the Founder:</strong><br>"We’re just two ordinary souls — who’ve carried our own quiet storms, faced lonely nights, and wished someone would simply listen.
+
+That’s why we created SoulCircle.
+A place where you can show up — messy, overwhelmed, or completely silent — and still be held in warmth.
+
+We’re not therapists. We’re not perfect.
+We’re just real humans offering a safe space to talk, cry, vent, or simply breathe.
+
+If you’re reading this right now, maybe life feels heavy.
+Come talk to us. No judgment. No pressure. Just presence.
+
+With heart,
+— Aleena & Azal
+Founders of SoulCircle"</p>
+    </section>
+
+    <section id="contact">
+        <h2>Book a Session</h2>
+        <form onsubmit="handleSubmit(event)">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <textarea id="message" placeholder="What would you like to talk about?" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Soul Circle | All rights reserved</p>
+    </footer>
+
+    <script>
+        function scrollToContact() {
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            alert(`Thank you, ${name}! We’ve received your message and will reach out to you at ${email}.`);
+            document.querySelector("form").reset();
+        }
+    </script>
+</body>
+</html>
