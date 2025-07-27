@@ -1,130 +1,196 @@
+/* Global styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9fbfc;
+  background: #fdfdfd;
   color: #333;
-}
-
-header {
-  background: #a3d2ca;
-  padding: 1rem 2rem;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #5c5470;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.8rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  margin: 0;
 }
 
-nav a {
+nav ul li a {
+  color: white;
   text-decoration: none;
-  color: #fff;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .hero {
+  background: linear-gradient(rgba(92, 84, 112, 0.7), rgba(92, 84, 112, 0.7)), url('hero.jpg') center/cover no-repeat;
   text-align: center;
-  padding: 4rem 2rem;
-  background: #fcd5ce;
+  padding: 100px 20px;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
 }
 
 .hero button {
-  padding: 0.75rem 1.5rem;
-  background: #ff7f50;
-  color: white;
+  padding: 10px 20px;
+  background-color: #ffd369;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 section {
-  padding: 2rem;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-ul {
-  padding-left: 1rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 1rem auto;
-  gap: 1rem;
-}
-
-input, textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button[type="submit"] {
-  background-color: #6c63ff;
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-footer {
+h2 {
   text-align: center;
-  padding: 1rem;
-  background-color: #222;
-  color: white;
+  color: #5c5470;
 }
 
-/* Team & Founder Styling */
-.team-section {
+.service-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-members {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
-  padding-top: 1rem;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.team-member {
+.member {
   text-align: center;
-  animation: fadeInUp 1s ease-in;
+  width: 220px;
 }
 
-.team-member img {
+.member img {
+  width: 100%;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 220px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.founder-message {
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#contactForm button {
+  padding: 10px;
+  background-color: #5c5470;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.pricing-table {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pricing-plan {
+  background: #fff7e6;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 280px;
   text-align: center;
-  font-style: italic;
-  margin-top: 1.5rem;
-  animation: fadeIn 2s ease-in;
+  transition: transform 0.3s ease;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.pricing-plan:hover {
+  transform: scale(1.05);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.pricing-plan ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.pricing-plan button {
+  padding: 10px 20px;
+  background-color: #ffd369;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
 }
